@@ -1,24 +1,16 @@
-import myName from './myName';
-import '../src/style.css';
-import laImagen from '../src/image23.png';
-import Data from './data.xml';
-import Notes from './data.csv';
+import _ from 'lodash';
+import printMe from './print';
 
 function component(){
     const element = document.createElement('div');
+    const btn = document.createElement('button');
 
-    // Using the already imported function i did on myName.js 
-    element.innerHTML = myName('Cody');
-    element.classList.add('hello');
+    element.innerHTML = _.join(['Hello', 'webpack'],'');
 
-    //adding our new image to the module export
-    const myImagen = new Image();
-    myImagen.src = laImagen;
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = printMe;
 
-    element.appendChild(myImagen);
-
-    console.log(Data);
-    console.log(Notes);
+    element.appendChild(btn);
 
     return element
 }
