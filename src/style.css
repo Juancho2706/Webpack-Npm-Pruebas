@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'ElFont';
+    src: url('../src/Daniel\ Davis.otf'),
+    url('../src/Roboto-Black.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hello{
+    color: red;
+    font-family: 'ElFont';
+    background: url('./image23.png');
+}
